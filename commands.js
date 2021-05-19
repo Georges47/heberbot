@@ -47,5 +47,11 @@ exports.commands = [
     replyType: 'voice',
     replyFileSource: `${VOICE_PATH}/sandui.mp3`,
     replyCaption: ''
+  },
+  {
+    name: 'pa ve como ta ese coco',
+    replyType: 'voice',
+    replyFileSource: `${VOICE_PATH}/esecocotaweno.mp3`,
+    replyCaption: ''
   }
 ];
