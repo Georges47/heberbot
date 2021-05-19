@@ -41,5 +41,11 @@ exports.commands = [
     replyType: 'voice', 
     replyFileSource: `${VOICE_PATH}/canta_papagayo.mp3` , 
     replyCaption: ''
+  },
+  {
+    name: 'gaylord',
+    replyType: 'voice',
+    replyFileSource: `${VOICE_PATH}/sandui.mp3`,
+    replyCaption: ''
   }
 ];
