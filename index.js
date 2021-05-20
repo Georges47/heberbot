@@ -6,19 +6,19 @@ commands.map((command) => {
   switch(command.replyType) {
     case 'text':
       bot.hears(
-        new RegExp(command.name, 'i'), 
+        new RegExp(`^${command.name}$`, 'i'),
         ctx => ctx.reply(command.replyCaption));
       break;
     case 'image':
       bot.hears(
-        new RegExp(command.name, 'i'), 
+        new RegExp(`^${command.name}$`, 'i'), 
         ctx => ctx.replyWithPhoto(
           { source: command.replyFileSource },
           { caption: command.replyCaption}));
       break;
       case 'voice':
       bot.hears(
-        new RegExp(command.name, 'i'), 
+        new RegExp(`^${command.name}$`, 'i'), 
         ctx => ctx.replyWithVoice(
           { source: command.replyFileSource }));
       break;
