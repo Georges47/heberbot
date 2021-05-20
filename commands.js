@@ -34,24 +34,20 @@ exports.commands = [
     name: 'guti', 
     replyType: 'image', 
     replyFileSource: `${IMAGE_PATH}/culo_joseba.jpg` , 
-    replyCaption: ''
   },
   {
     name: 'canta papagayo', 
     replyType: 'voice', 
     replyFileSource: `${VOICE_PATH}/canta_papagayo.mp3` , 
-    replyCaption: ''
   },
   {
     name: 'gaylord',
     replyType: 'voice',
     replyFileSource: `${VOICE_PATH}/sandui.mp3`,
-    replyCaption: ''
   },
   {
     name: 'pa ve como ta ese coco',
     replyType: 'voice',
     replyFileSource: `${VOICE_PATH}/esecocotaweno.mp3`,
-    replyCaption: ''
   }
 ];

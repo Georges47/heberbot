@@ -3,24 +3,25 @@ const bot = new Telegraf('1897625597:AAHqZSKMW4y1nRnz0X7KTlPPtE1uKMYOFFw', {user
 const commands = require('./commands').commands;
 
 commands.map((command) => {
-  switch(command.replyType) {
+  const { name, replyType, replyFileSource, replyCaption } = command; 
+  switch(replyType) {
     case 'text':
       bot.hears(
-        new RegExp(command.name, 'i'), 
-        ctx => ctx.reply(command.replyCaption));
+        new RegExp(name, 'i'), 
+        ctx => ctx.reply(replyCaption));
       break;
     case 'image':
       bot.hears(
-        new RegExp(command.name, 'i'), 
+        new RegExp(name, 'i'), 
         ctx => ctx.replyWithPhoto(
-          { source: command.replyFileSource },
-          { caption: command.replyCaption}));
+          { source: replyFileSource },
+          { caption: replyCaption}));
       break;
       case 'voice':
       bot.hears(
-        new RegExp(command.name, 'i'), 
+        new RegExp(name, 'i'), 
         ctx => ctx.replyWithVoice(
-          { source: command.replyFileSource }));
+          { source: replyFileSource }));
       break;
   }
 });
